@@ -81,3 +81,130 @@
         }
     }
 }
+
+.s-card-neon {
+    padding-top: 21.9rem;
+    .container {
+        @include flex(row, space-between, flex-start);
+    }
+    .left-area {
+        width: 100%;
+        max-width: 27.7rem;
+        .illustra-mockup {
+            width: 100%;
+            max-width: 27.7rem;
+            position: relative;
+            margin-bottom: 12.9rem;
+            .circle {
+                position: absolute;
+                z-index: -1;
+                top: 8.7rem;
+                left: -21.4rem;
+                max-width: 37.7rem;
+            }
+        }
+        .text {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            .icon {
+                position: relative;
+                &:before {
+                    content: '';
+                    width: 5px;
+                    height: 83px;
+                    position: absolute;
+                    top: -104px;
+                    left: 50%;
+                    margin-left: -2.5px;
+                    background: url("../img/points.svg") no-repeat center center;
+                }
+            }
+            .info-txt {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                h3 {
+                    text-align: center;
+                    margin-top: 3.6rem;
+                    color: $gray-600;
+                }
+                p {
+                    text-align: center;
+                    font-size: 1.6rem;
+                    line-height: 150%;
+                    text-align: center;
+                    color: $gray-400;
+                    opacity: 0.8;
+                }
+                ul {
+                    li {
+                        &:not(:last-child) {
+                            margin-bottom: 2.6rem;
+                        }
+                    }
+                }
+            }
+        }
+        
+        
+    }
+    .right-area {
+        width: 100%;
+        max-width: 80rem;
+        h2 {
+            max-width: 48.8rem;
+            color: $gray-600;
+            margin-bottom: 4.9rem;
+        }
+        ul {
+            margin-bottom: 3.2rem;
+            li {
+                @include flex(row, space-between, center);
+                border-bottom: 1px solid rgba(225, 224, 231, 0.9);
+                padding: 3.3rem 0rem;
+                &:first-child {
+                    padding-top: 0rem;
+                }
+                .info {
+                    display: flex;
+                    align-items: center;
+                    .txt {
+                        margin-left: 4.3rem;
+                        h3 {
+                            color: $gray-400;
+                        }
+                         p {
+                            font-weight: 400;
+                            font-size: 1.8rem;
+                            line-height: 150%;
+                            color: $gray-300;
+                         }
+                    }
+                }
+            }
+        }
+        .btn {
+            position: relative;
+            display: inline-block;
+            font-family: 'Poppins';
+            font-weight: 500;
+            font-size: 1.6rem;
+            line-height: 112%;
+            letter-spacing: -0.5px;
+            color: $brand-blue;
+            &::after {
+                content: '';
+                position: absolute;
+                right: 0;
+                bottom: 0;
+                width: 10px;
+                height: 2px;
+                left: 204px;
+                top: 16px;
+                background-color: $brand-yellow;
+            }
+        }
+    }
+}
