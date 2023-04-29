@@ -36,11 +36,9 @@
 </head>
 
 <body>
-    <header>
+    <header id="js-header">
         <div class="container">
-            <a href="" class="logo">
-                <img src="./img/logo.svg" alt="Logo Neon">
-            </a>
+            <a href="" class="logo"></a>
             <nav>
                 <div class="dropdown js-dropdown">
                     <div class="item">
@@ -72,12 +70,26 @@
                     <li><a href="">Ajuda</a></li>
                 </ul>
                 <button class="btn-secondary white">Abra sua conta digital</button>
-                <button class="btn-mobile">
+                <button class="btn-mobile" id="js-btn-menu-mobile">
                     <img src="./img/btn-mobile.svg" alt="">
                 </button>
             </nav>
         </div>
     </header>
+    <div class="menu-mobile">
+        <div class="overlay js-overlay">
+        </div>
+        <aside>
+            <img src="/img/logo-neon-negative.svg" alt="Logo banco Neon" class="logo">
+            <ul>
+                <li><a href="" class="js-btn-dropdown">Produtos</a></li>
+                <li><a href="">Conta digital PJ</a></li>
+                <li><a href="">Quem somos</a></li>
+                <li><a href="">Blog</a></li>
+                <li><a href="">Ajuda</a></li>
+            </ul>
+        </aside>
+    </div>
     <section class="s-hero">
         <div class="container">
             <div class="text" data-aos="fade-right">

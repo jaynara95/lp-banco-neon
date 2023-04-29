@@ -26,8 +26,15 @@ AOS.init({
     once: true
 });
 
+/*******************************  
+Js de funcionalidade do projeto
+********************************/
+
 const btnDropdown = document.querySelector('.js-btn-dropdown');
 const dropdown = document.querySelector('.js-dropdown');
+const header = document.getElementById('js-header');
+const btnMenu = document.getElementById('js-btn-menu-mobile');
+const overlayMenu = document.querySelector('.js-overlay');
 
 function openDropdown(e) {
     e.preventDefault();
@@ -37,3 +44,20 @@ function openDropdown(e) {
 
 btnDropdown.addEventListener('click', openDropdown);
 dropdown.addEventListener('mouseleave', openDropdown);
+
+function fixedMenu() {
+    if(window.pageYOffset > 80) {
+        header.classList.add('fixed-menu')
+    } else {
+        header.classList.remove('fixed-menu');
+    }
+}
+
+document.addEventListener('scroll', fixedMenu);
+
+function openMenuMobile() {
+   document.documentElement.classList.toggle('menu-opened'); 
+}
+
+btnMenu.addEventListener('click', openMenuMobile);
+overlayMenu.addEventListener('click', openMenuMobile);
