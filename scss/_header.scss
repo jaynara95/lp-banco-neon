@@ -13,6 +13,56 @@ header {
     nav {
         display: flex;
         align-items: center;
+        position: relative;
+        .dropdown {
+            position: absolute;
+            top: 4.9rem;
+            left: -130px;
+            width: 100%;
+            max-width: 373px;
+            background-color: #ffffff;
+            border-radius: 6px;
+            padding: 4rem;
+            opacity: 0;
+            pointer-events: none;
+            transform: translateY(20px);
+            transition: all .3s;
+            z-index: 1;
+            &.active {
+                opacity: 1;
+                transform: translateY(0px);
+                pointer-events: all;
+            }
+            &:after {
+                content: "";
+                width: 293px;
+                height: 5px;
+                background: #FFC800;
+                border-radius: 12px 12px 0 0;
+                position: absolute;
+                bottom: 0;
+            }
+            .item {
+                cursor: pointer;
+                &:not(:last-child) {
+                    margin-bottom: 2.8rem;
+                }
+                &:hover {
+                    strong {
+                        color: #0073CE;
+                    }
+                }
+                strong {
+                    font-weight: 600;
+                    font-size: 1.6rem;
+                    line-height: 1.9rem;
+                    color: #5F5C6B;
+                    display: block;
+                    margin-bottom: 4px;
+                }
+            }
+            
+        }
     
         ul {
             display: flex;
